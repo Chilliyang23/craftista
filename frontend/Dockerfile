@@ -40,7 +40,7 @@ EXPOSE 3000
 # ENV NODE_ENV=production
 
 # Add a health check (modify as per your app's needs)
-# HEALTHCHECK --interval=30s --timeout=30s CMD curl -f http://localhost:3000 || exit 1
+HEALTHCHECK --interval=30s --timeout=30s CMD curl -f http://localhost:3000 || exit 1
 
 # Define the command to run your application
 CMD ["node", "app.js"]
