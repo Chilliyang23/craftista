@@ -15,13 +15,13 @@ jobs:
     strategy:
       matrix:
         include:
-        - app: Catalogue
+        - app: catalogue
           context: ./catalogue
-        - app: Voting
+        - app: voting
           context: ./voting
-        - app: Frontend
+        - app: frontend
           context: ./frontend
-        - app: Recommendation
+        - app: recommendation
           context: ./recommendation
           
     steps:
