@@ -44,8 +44,8 @@ jobs:
         file: ${{ matrix.context }}/Dockerfile
         push: true
         tags: |
-          ${{ env.REGISTRY }}/${{ secrets.DOCKERHUB_USERNAME }}${{ matrix.app }}:latest
-          ${{ env.REGISTRY }}/${{ secrets.DOCKERHUB_USERNAME }}${{ matrix.app }}:${{ github.sha }}
+          ${{ env.REGISTRY }}/${{ secrets.DOCKERHUB_USERNAME }}/${{ matrix.app }}:latest
+          ${{ env.REGISTRY }}/${{ secrets.DOCKERHUB_USERNAME }}/${{ matrix.app }}:${{ github.sha }}
         # Tries to restore Docker layer cache from previous builds
         cache-from: type=gha
         # Saves the Docker layer cache for future builds
