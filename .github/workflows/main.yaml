@@ -40,7 +40,7 @@ jobs:
     - name: Build and Push Docker Image
       uses: docker/build-push-action@v6.18.0
       with:
-        build-context: ${{ matrix.context }}
+        context: ${{ matrix.context }}
         file: ${{ matrix.context }}/Dockerfile
         push: true
         tags: |
